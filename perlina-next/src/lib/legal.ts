@@ -5,9 +5,8 @@
 export const LEGAL = {
   raisonSociale: "Perlina By L",
   formeJuridique: "SASU",
-  // Le site affichait « 500 € » et « RCS Montpellier » : à confirmer avant de les remettre.
-  capital: null as string | null,
-  rcsVille: null as string | null,
+  capital: "500 €" as string | null,
+  rcsVille: "Montpellier" as string | null,
   siren: "103 610 143",
   siret: "103 610 143 00010",
   tva: "FR 52 103 610 143",
