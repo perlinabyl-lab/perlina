@@ -9,5 +9,6 @@ describe("JSON-LD BeautySalon", () => {
     expect(data.url).toBe("https://www.perlinabyl.fr");
     expect(data["@type"]).toBe("BeautySalon");
     expect(data).not.toHaveProperty("openingHours");
+    expect(data.sameAs).toContain("https://www.instagram.com/perlinabyl/");
   });
 });

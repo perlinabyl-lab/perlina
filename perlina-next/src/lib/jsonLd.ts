@@ -1,4 +1,5 @@
 import { CONTACT_PHONE_E164 } from "./contact";
+import { PUBLISHED_SOCIAL_LINKS } from "./social";
 import { CATALOG, eur, type CatalogCategory, type CatalogItem } from "@/content/catalog";
 
 function offerLabel(cat: CatalogCategory, item: CatalogItem): string {
@@ -36,6 +37,7 @@ export function buildLocalBusinessJsonLd(siteUrl: string) {
     },
     image: `${siteUrl}/images/salon-1.jpg`,
     makesOffer: offers,
+    sameAs: PUBLISHED_SOCIAL_LINKS.map((s) => s.url),
     priceRange: eur(Math.min(...CATALOG.flatMap((c) => c.items.map((i) => i.price)))),
   };
 }

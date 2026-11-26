@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164 } from "../lib/contact";
+import { PUBLISHED_SOCIAL_LINKS } from "../lib/social";
 
 export default function Footer() {
   return (
@@ -32,13 +33,25 @@ export default function Footer() {
             <Link href="/soins">Nos soins</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/reservation">Rendez-vous</Link>
+            <Link href="/mentions-legales">Mentions légales</Link>
           </nav>
         </div>
+        {PUBLISHED_SOCIAL_LINKS.length > 0 ? (
+          <div className="foot-col">
+            <h4>Suivez-nous</h4>
+            {PUBLISHED_SOCIAL_LINKS.map((s) => (
+              <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer">
+                {s.name} · {s.handle}
+              </a>
+            ))}
+          </div>
+        ) : null}
       </div>
       <div className="foot-legal">
         © {new Date().getFullYear()} Perlina By L — Institut de beauté · Sur rendez-vous
         <br />
-        Perlina By L, SAS au capital de 500 € · RCS Montpellier 103 610 143 · TVA FR 52 103 610 143 · Technologie INDIBA® Deep Beauty
+        Perlina By L, SAS au capital de 500 € · RCS Montpellier 103 610 143 · TVA FR 52 103 610 143 · Technologie INDIBA® Deep Beauty ·{" "}
+        <Link href="/mentions-legales">Mentions légales</Link>
       </div>
     </footer>
   );

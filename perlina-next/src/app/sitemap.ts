@@ -1,6 +1,6 @@
 import { SITE_URL } from "../lib/site";
 
-const PUBLIC_PATHS = ["/", "/a-propos", "/contact", "/reservation", "/soins"];
+const PUBLIC_PATHS = ["/", "/a-propos", "/contact", "/reservation", "/soins", "/mentions-legales"];
 
 /** @returns {import("next").MetadataRoute.Sitemap} */
 export default function sitemap() {

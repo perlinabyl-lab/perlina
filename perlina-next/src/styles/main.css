@@ -662,7 +662,7 @@ label em{font-style:normal;letter-spacing:.08em;text-transform:none;color:var(--
   font-size:clamp(5rem,16vw,11rem);color:var(--foot-mark);pointer-events:none;line-height:1;white-space:nowrap;
   opacity:var(--foot-mark-opacity, .04);
 }
-.foot-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:2.4rem;max-width:var(--container-max);margin:0 auto;position:relative;z-index:1}
+.foot-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr .9fr;gap:2.4rem;max-width:var(--container-max);margin:0 auto;position:relative;z-index:1}
 .foot-brand .script{font-size:2.5rem}
 .foot-sub{font-family:var(--font-serif), 'Cormorant Garamond', Georgia, serif;letter-spacing:.4em;font-size:.66rem;text-transform:uppercase;margin-top:.15rem}
 .foot-col h4{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--or-fonce);margin-bottom:1rem;font-family:var(--font-sans), Jost, sans-serif;font-weight:400}
@@ -800,3 +800,12 @@ label em{font-style:normal;letter-spacing:.08em;text-transform:none;color:var(--
   .tag{padding:.35rem .75rem;font-size:.62rem;letter-spacing:.1em}
   .scroll-cue{bottom:1.1rem}
 }
+
+/* ===== Mentions légales ===== */
+.legal-page{max-width:760px}
+.legal-body{margin-top:2.6rem;color:var(--ink-soft);line-height:1.8}
+.legal-body h2{font-size:clamp(1.35rem,2vw,1.7rem);font-weight:400;color:var(--ink, inherit);margin:2.4rem 0 .8rem}
+.legal-body ul{padding-left:1.2rem;margin:.6rem 0}
+.legal-body a{color:var(--or-fonce)}
+.foot-legal a{color:inherit}
+.legal-todo{background:#fff3c4;color:#7a5200;padding:.05em .35em;border-radius:3px;font-weight:500}

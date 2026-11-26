@@ -2,6 +2,7 @@ import Link from "next/link";
 import SectionTitle from "../../components/SectionTitle";
 import FadeIn from "../../components/gsap/FadeIn";
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164 } from "../../lib/contact";
+import { PUBLISHED_SOCIAL_LINKS } from "../../lib/social";
 
 import { pageMetadata } from "../../lib/site";
 
@@ -41,6 +42,16 @@ export default function Contact() {
                 <b>Accueil</b>
                 <span>Uniquement sur rendez-vous</span>
               </div>
+              {PUBLISHED_SOCIAL_LINKS.map((s) => (
+                <div className="info-line" key={s.name}>
+                  <b>{s.name}</b>
+                  <span>
+                    <a href={s.url} className="link-u" target="_blank" rel="noopener noreferrer">
+                      @{s.handle}
+                    </a>
+                  </span>
+                </div>
+              ))}
             </div>
             <div className="info-bloc">
               <h3>
