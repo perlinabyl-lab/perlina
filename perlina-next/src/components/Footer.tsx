@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_E164 } from "../lib/contact";
 import { PUBLISHED_SOCIAL_LINKS } from "../lib/social";
+import { LEGAL } from "../lib/legal";
 
 export default function Footer() {
   return (
@@ -50,7 +51,10 @@ export default function Footer() {
       <div className="foot-legal">
         © {new Date().getFullYear()} Perlina By L — Institut de beauté · Sur rendez-vous
         <br />
-        Perlina By L, SAS au capital de 500 € · RCS Montpellier 103 610 143 · TVA FR 52 103 610 143 · Technologie INDIBA® Deep Beauty ·{" "}
+        {LEGAL.raisonSociale}, {LEGAL.formeJuridique}
+        {LEGAL.capital ? ` au capital de ${LEGAL.capital}` : ""} ·{" "}
+        {LEGAL.rcsVille ? `RCS ${LEGAL.rcsVille} ${LEGAL.siren}` : `SIREN ${LEGAL.siren}`} · TVA {LEGAL.tva} ·
+        Technologie INDIBA® Deep Beauty ·{" "}
         <Link href="/mentions-legales">Mentions légales</Link>
       </div>
     </footer>

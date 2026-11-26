@@ -30,7 +30,9 @@ export default function MentionsLegales() {
           </p>
           <ul>
             <li>Siège social : <Field value={LEGAL.siege} label="adresse du siège" /></li>
-            <li>Immatriculation : <Field value={LEGAL.rcs} label="numéro RCS" /></li>
+            <li>
+              Immatriculation : RCS <Field value={LEGAL.rcsVille} label="ville du greffe RCS" /> {LEGAL.siren}
+            </li>
             <li>SIRET : <Field value={LEGAL.siret} label="numéro SIRET" /></li>
             <li>TVA intracommunautaire : <Field value={LEGAL.tva} label="numéro de TVA" /></li>
             <li>

@@ -1,17 +1,19 @@
 /**
- * Informations légales (page /mentions-legales).
+ * Informations légales (page /mentions-legales et pied de page).
  * `null` = information à fournir : la page affiche un emplacement « À compléter ».
  */
 export const LEGAL = {
   raisonSociale: "Perlina By L",
-  formeJuridique: "SAS", // déjà indiqué dans le pied de page — à confirmer
-  capital: "500 €", // déjà indiqué dans le pied de page — à confirmer
-  rcs: "RCS Montpellier 103 610 143",
-  siret: null as string | null,
+  formeJuridique: "SASU",
+  // Le site affichait « 500 € » et « RCS Montpellier » : à confirmer avant de les remettre.
+  capital: null as string | null,
+  rcsVille: null as string | null,
+  siren: "103 610 143",
+  siret: "103 610 143 00010",
   tva: "FR 52 103 610 143",
-  siege: "15 rue Frédéric Mistral, 34280 La Grande-Motte", // siège = adresse de l'institut ? à confirmer
-  directricePublication: null as string | null,
-  email: null as string | null,
+  siege: "15 rue Frédéric Mistral, 34280 La Grande-Motte",
+  directricePublication: "Lorie FAZIO-SINET, présidente",
+  email: "perlinabyl@gmail.com" as string | null,
   hebergeur: {
     nom: "Vercel Inc.",
     adresse: "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
